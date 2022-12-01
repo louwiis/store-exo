@@ -22,7 +22,7 @@ export default function Home() {
     }
     
     return (
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap bg-gray-100">
             {movies.map((movie) => (
                 <div className="p-4">
                     <div className="bg-white rounded shadow p-4 h-full">
