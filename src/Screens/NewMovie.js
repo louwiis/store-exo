@@ -4,7 +4,6 @@ import { StoreContext } from "../Providers/Store"
 export default function Home() {
     const { movies, setMovies } = useContext(StoreContext)
 
-    // create a new movie function on user choices
     const newMovie = () => {
         const newTitle = prompt("Enter a new title")
         const newCategory = prompt("Enter a new category")
@@ -14,7 +13,6 @@ export default function Home() {
             category: newCategory,
             image: 'https://dummyimage.com/640x360'
         }
-        // update the list of movies
         setMovies([...movies, newMovie])
     }
 

@@ -4,20 +4,15 @@ import { StoreContext } from "../Providers/Store"
 export default function Home() {
     const { movies, setMovies } = useContext(StoreContext)
 
-    // remove one movie from the list
     const removeMovie = (id) => {
         const newMovies = movies.filter((movie) => movie.id !== id)
         setMovies(newMovies)
     }
 
     const editMovie = (id) => {
-        // prompt the user to enter a new title
         const newTitle = prompt("Enter a new title")
-        // find the movie to edit
         const movieToEdit = movies.find((movie) => movie.id === id)
-        // update the title
         movieToEdit.title = newTitle
-        // update the list of movies
         setMovies([...movies])     
     }
     
